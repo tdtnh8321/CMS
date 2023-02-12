@@ -12,33 +12,31 @@ import { DefaultLayout } from "./components/Layout";
 function App() {
   const auth = useSelector((slice) => slice.auth);
   return (
-    <div className="content-wrapper max-w-screen-2xl text-base mx-auto bg-blue-200 font-mono">
-      <Suspense fallback={<Loading />}>
-        <BrowserRouter>
-          <Routes>
-            {publicRoutes.map((route, index) => {
-              const Page = route.component;
-              return <Route key={index} path={route.path} element={<Page />} />;
-            })}
-            {privateRoutes.map((route, index) => {
-              const Layout = DefaultLayout;
-              const Page = route.component;
-              return (
-                <Route
-                  key={index}
-                  path={route.path}
-                  element={
-                    <Layout>
-                      <Page />
-                    </Layout>
-                  }
-                />
-              );
-            })}
-          </Routes>
-        </BrowserRouter>
-      </Suspense>
-    </div>
+    <Suspense fallback={<Loading />}>
+      <BrowserRouter>
+        <Routes>
+          {publicRoutes.map((route, index) => {
+            const Page = route.component;
+            return <Route key={index} path={route.path} element={<Page />} />;
+          })}
+          {privateRoutes.map((route, index) => {
+            const Layout = DefaultLayout;
+            const Page = route.component;
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Layout>
+                    <Page />
+                  </Layout>
+                }
+              />
+            );
+          })}
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
   );
 }
 
