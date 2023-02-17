@@ -2,9 +2,10 @@ import axiosClient from "./axiosClient";
 class AuthApi {
   login = async (data) => {
     const url = "/user/login";
-    return axiosClient.post(url, data, {
+    return axiosClient.post(url, {
+      body: data,
       paramsSerializer: {
-        indexes: false, // empty brackets like `arrayOfUserIds[]`
+        indexes: false,
       },
     });
   };

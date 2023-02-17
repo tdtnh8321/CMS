@@ -24,6 +24,7 @@ const UserController = {
   getAccessToken: (req, res) => {
     try {
       const rf_token = req.cookies.refreshtoken;
+      console.log(rf_token);
       if (!rf_token) return res.status(400).json({ msg: "Please login now!" });
 
       res.json({ access_token: rf_token });
@@ -35,7 +36,6 @@ const UserController = {
     try {
       const id = req.header("Authorization");
       const user = await UserModel.findById(id).select("-password");
-
       res.json(user);
     } catch (err) {
       return res.status(500).json({ msg: err.message });
