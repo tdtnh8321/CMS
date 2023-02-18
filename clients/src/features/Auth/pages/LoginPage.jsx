@@ -11,7 +11,7 @@ function LoginPage(props) {
     password: "",
     err: "",
     sussess: "",
-  });
+  }); 
   const dispatch = useDispatch();
   const { email, password, err, sussess } = user;
   const handleChangeInput = (e) => {
