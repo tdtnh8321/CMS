@@ -11,7 +11,7 @@ function LoginPage(props) {
     password: "",
     err: "",
     sussess: "",
-  }); 
+  });
   const dispatch = useDispatch();
   const { email, password, err, sussess } = user;
   const handleChangeInput = (e) => {
@@ -25,11 +25,11 @@ function LoginPage(props) {
         password,
       });
 
-      console.log(res.data.msg);
+      console.log(res.data);
       setUser({ ...user, err: "", sussess: res.data.msg });
-      localStorage.setItem("firstLogin", true);
+      localStorage.setItem("firstLogin", res.data.user._id);
 
-      dispatch(login());
+      dispatch(login(res.data.user));
 
       navigate("/home");
     } catch (err) {
