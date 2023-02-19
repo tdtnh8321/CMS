@@ -1,7 +1,7 @@
 // api/axiosClient.js
 import axios from "axios";
 import queryString from "query-string";
-
+axios.defaults.withCredentials = true;
 const axiosClient = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {

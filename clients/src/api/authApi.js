@@ -9,6 +9,15 @@ class AuthApi {
       },
     });
   };
+  changePassword = async (data) => {
+    const url = "/user/changepassword";
+    return axiosClient.post(url, {
+      body: data,
+      paramsSerializer: {
+        indexes: false,
+      },
+    });
+  };
 }
 const authApi = new AuthApi();
 export default authApi;
