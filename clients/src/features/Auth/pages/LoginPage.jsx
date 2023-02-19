@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../authSlice";
 import axios from "axios";
+import authQuery from "../../../queries/AuthQuery";
 function LoginPage(props) {
   const navigate = useNavigate();
   const [user, setUser] = useState({
@@ -10,7 +11,7 @@ function LoginPage(props) {
     password: "",
     err: "",
     sussess: "",
-  }); 
+  });
   const dispatch = useDispatch();
   const { email, password, err, sussess } = user;
   const handleChangeInput = (e) => {
@@ -23,11 +24,12 @@ function LoginPage(props) {
         email,
         password,
       });
-      console.log(res.data.msg);
-      setUser({ ...user, err: "", sussess: res.data.msg });
-      localStorage.setItem("firstLogin", true);
 
-      dispatch(login());
+      console.log(res.data);
+      setUser({ ...user, err: "", sussess: res.data.msg });
+      localStorage.setItem("firstLogin", res.data.user._id);
+
+      dispatch(login(res.data.user));
 
       navigate("/home");
     } catch (err) {

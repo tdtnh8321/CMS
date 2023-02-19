@@ -1,0 +1,2 @@
+- ràng luộc sau khi login thành công, ko quay lại trang login
+  -design

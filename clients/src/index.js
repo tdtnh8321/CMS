@@ -5,16 +5,16 @@ import { store } from "./app/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
-
+import QueryClientApp from "./app/QueryClient";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
 root.render(
-  <>
-    <Provider store={store}>
+  <Provider store={store}>
+    <QueryClientApp>
       <App />
-    </Provider>
-  </>
+    </QueryClientApp>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

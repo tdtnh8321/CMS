@@ -1,6 +1,3 @@
-npm i express morgan nodemon mongoose mongoose-slug-generator mongoose-slug-updater
-
-npm i dotenv cors cloudinary express-fileupload
-node-fetch
-
-npm i cookie-parser bcrypt jsonwebtoken googleapis nodemailer
+- đổi mật khẩu {msg:"đổi mk thành công",data:data}
+  -phân trang linh động
+  -multiple database
