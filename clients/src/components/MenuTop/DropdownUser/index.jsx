@@ -2,15 +2,15 @@ import { Menu } from "antd";
 
 const items = [
   {
-    label: "HomePage",
+    label: "Phong Vu",
     key: "mail",
   },
   {
-    label: "Navigate 2",
+    label: "Shopee",
     key: "homepage",
   },
   {
-    label: "Submen",
+    label: "Shendo",
     key: "submenu",
     children: [
       {
@@ -23,7 +23,6 @@ const items = [
       },
     ],
   },
-  
 ];
 
 function DropdownUser() {
