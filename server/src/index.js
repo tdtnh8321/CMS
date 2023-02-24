@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
-const db = require("./config/db/index");
+const { connect, sql } = require("./config/db/index");
 const router = require("./routers/index");
 const app = express();
 app.use(
@@ -20,7 +20,7 @@ app.use(
 );
 app.use(cookieParser());
 app.use(morgan("combined"));
-db.connect();
+
 router(app);
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
