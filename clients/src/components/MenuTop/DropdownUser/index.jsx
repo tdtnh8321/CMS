@@ -2,11 +2,11 @@ import { Menu } from "antd";
 
 const items = [
   {
-    label: "HomePage",
+    label: "Phong Vu",
     key: "mail",
   },
   {
-    label: "Navigate 2",
+    label: "Shopee",
     key: "homepage",
   },
   {
@@ -23,7 +23,6 @@ const items = [
       },
     ],
   },
-  
 ];
 
 function DropdownUser() {
