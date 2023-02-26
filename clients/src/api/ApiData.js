@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
-export default async function CallApi(endpoint, method = 'get', data) {
+export default async function CallApi(endpoint, method, data) {
   const url = `${API_URL}/${endpoint}`;
   try {
     const response = await axios({

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import {
   Form,
@@ -7,7 +7,6 @@ import {
   Select,
   DatePicker,
   InputNumber,
-  Switch,
   Upload,
 } from "antd";
 
@@ -20,7 +19,6 @@ const UserInfo = () => {
       <div className="">
         {" "}
         <Form
-          
           labelCol={{ span: 4 }}
           wrapperCol={{ span: 14 }}
           layout="horizontal"
@@ -46,9 +44,6 @@ const UserInfo = () => {
           <Form.Item label="TextArea">
             <TextArea rows={4} />
           </Form.Item>
-          <Form.Item label="Switch" valuePropName="checked">
-            <Switch />
-          </Form.Item>
           <Form.Item label="Upload" valuePropName="fileList">
             <Upload action="/upload.do" listType="picture-card">
               <div>
@@ -57,8 +52,9 @@ const UserInfo = () => {
               </div>
             </Upload>
           </Form.Item>
+          
           <Form.Item>
-            <Button>CLick</Button>
+            <Button>Change</Button>
           </Form.Item>
         </Form>
       </div>

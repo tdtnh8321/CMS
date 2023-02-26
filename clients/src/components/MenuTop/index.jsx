@@ -3,7 +3,7 @@ import { Dropdown, Space,Modal } from "antd";
 import { useState,useEffect } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
-import { useNavigate ,useHistory} from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import {Get} from "../../api/ApiMethod";
 
 function MenuTop(prop) {
@@ -43,7 +43,6 @@ function MenuTop(prop) {
       label: "Logout",
       key: "2",
       onClick: ()=>{
-      
        showModal()
       },
     },
@@ -52,18 +51,15 @@ function MenuTop(prop) {
   const menuProps = {
     items,
   };
-  
-
   return (
     <div className="Menu-top flex justify-between items-center m-2">
       <DropdownUser />
       <div className="Menu-right my-2">
         <Dropdown menu={menuProps}>
-          <a className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Space className="mx-1">{authSlice.user.name}</Space>
-
             <DownOutlined />
-          </a>
+          </Link>
         </Dropdown>
         <Modal title="Announce" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           Are you sure want to Logout the account
