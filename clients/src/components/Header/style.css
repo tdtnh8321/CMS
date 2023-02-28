@@ -1,0 +1,4 @@
+.ant-menu-submenu:not(.active):hover {
+  
+    background-color: transparent;
+}

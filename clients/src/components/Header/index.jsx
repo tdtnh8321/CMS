@@ -1,42 +1,7 @@
-
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import { Menu } from "antd";
-
+import "./style.css";
 import logo from "../../assets/images/08_Supreme.jpg";
-function getItem(label, key, icon, children, type) {
-  return {
-    key,
-    icon,
-    children,
-    label,
-    type,
-  };
-}
-function Header(props) {
-  const items = [
-    getItem("Navigation One", "sub1", <MailOutlined />, [
-      getItem("Option 1", "1"),
-      getItem("Option 2", "2"),
-      getItem("Option 3", "3"),
-      getItem("Option 4", "4"),
-    ]),
-    getItem("Navigation Two", "sub2", <AppstoreOutlined />, [
-      getItem("Option 5", "5"),
-      getItem("Option 6", "6"),
-    ]),
-    getItem("Navigation Three", "sub4", <SettingOutlined />, [
-      getItem("Option 9", "9"),
-      getItem("Option 10", "10"),
-      getItem("Option 11", "11"),
-      getItem("Option 12", "12"),
-    ]),
-    
-  ];
-  // const rootSubmenuKeys = ["sub1", "sub2", "sub4"];
+function Header() {
   return (
     <div className="m-5 header-left">
       <div className="LOGO my-3 flex items-center">
@@ -49,14 +14,94 @@ function Header(props) {
       </div>
       <div className="Menu-container">
         <Menu
-          mode="inline"
-          style={{
-            width: 256,
-            background: "none",
-            color: "white",
-          }}
-          items={items}
-        />
+        mode="inline"
+        theme="dark"
+        >
+        <Menu.SubMenu title={"Navigation 1"}>
+          <Menu.Item>
+            <span> OPTION 1</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 1</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 1</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 1</span>
+          </Menu.Item>
+        </Menu.SubMenu>
+        <Menu.SubMenu title={"Navigation 2"}>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+        </Menu.SubMenu>
+        <Menu.SubMenu title={"Navigation 2"}>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+        </Menu.SubMenu>
+        <Menu.SubMenu title={"Navigation 2"}>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+        </Menu.SubMenu>
+        <Menu.SubMenu title={"Navigation 2"}>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+        </Menu.SubMenu>
+        <Menu.SubMenu title={"Navigation 2"}>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+          <Menu.Item>
+            <span> OPTION 2</span>
+          </Menu.Item>
+        </Menu.SubMenu>
+        </Menu>     
       </div>
     </div>
   );

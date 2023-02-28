@@ -35,6 +35,7 @@ function LoginPage(props) {
     } catch (err) {
       err.response.data.msg &&
         setUser({ ...user, err: err.response.data.msg, success: "" });
+       
     }
   };
   return (
