@@ -8,5 +8,8 @@ const config = {
   driver: "msnodesqlv8",
 };
 
-const connect = new sql.ConnectionPool(config).connect().then((pool) => pool);
+const connect = new sql.ConnectionPool(config).connect().then((pool) => {
+  console.log("connect sql");
+  return pool;
+});
 module.exports = { connect, sql };

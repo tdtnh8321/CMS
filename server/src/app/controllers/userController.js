@@ -1,22 +1,9 @@
-const UserModel = require("../models/userModel");
 const { connect, sql } = require("../../config/db");
 const UserController = {
   login: async (req, res) => {
     try {
       const pool = await connect;
       const { email, password } = req.body;
-      // const user = await UserModel.findOne({ email, password }).select(
-      //   "-password"
-      // );
-      // if (!user)
-      //   return res
-      //     .status(400)
-      //     .json({ msg: "Email or password is not exists." });
-      // if (user.role == 0) {
-      //   return res
-      //     .status(200)
-      //     .json({ msg: "Login admin success!", user: user });
-      // }
 
       const sqlString = "exec loginUser @email, @password ";
       return pool
