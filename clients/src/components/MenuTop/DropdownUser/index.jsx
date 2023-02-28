@@ -10,7 +10,7 @@ const items = [
     key: "homepage",
   },
   {
-    label: "Shendo",
+    label: "Submenu",
     key: "submenu",
     children: [
       {
