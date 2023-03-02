@@ -26,10 +26,10 @@ function LoginPage(props) {
       });
 
       console.log(res.data);
-      setUser({ ...user, err: "", sussess: res.data.msg });
-      localStorage.setItem("firstLogin", res.data.user._id);
+      // setUser({ ...user, err: "", sussess: res.data.msg });
+      localStorage.setItem("firstLogin", res.data._id);
 
-      dispatch(login(res.data.user));
+      dispatch(login(res.data));
 
       navigate("/home");
     } catch (err) {
