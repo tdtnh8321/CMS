@@ -2,9 +2,8 @@ const { connect, sql } = require("../../config/db");
 const UserController = {
   login: async (req, res) => {
     try {
-      const pool = await connect;
       const { email, password } = req.body;
-
+      const pool = await connect;
       const sqlString = "exec loginUser @email, @password ";
       return pool
         .request()
