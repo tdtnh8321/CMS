@@ -1,16 +1,15 @@
 import React from "react";
 import { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import Loading from "./components/Loading";
 
-import Auth from "./features/Auth";
-import Home from "./features/Home";
+// import Auth from "./features/Auth";
+// import Home from "./features/Home";
 import { publicRoutes, privateRoutes } from "./routes";
 import { DefaultLayout } from "./components/Layout";
 
 function App() {
-  const auth = useSelector((slice) => slice.auth);
   return (
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
