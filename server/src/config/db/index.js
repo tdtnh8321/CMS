@@ -1,7 +1,7 @@
 const sql = require("mssql/msnodesqlv8");
 
 const config = {
-  server: "localhost",
+  server: "DESKTOP-GNO2ID0\\SQLEXPRESS",
   user: "sa",
   password: "sa",
   database: "CMS",
