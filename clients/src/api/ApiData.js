@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://jsonplaceholder.typicode.com';
+const API_URL = 'http://localhost:5000';
 
 export default async function CallApi(endpoint, method, data) {
   const url = `${API_URL}/${endpoint}`;

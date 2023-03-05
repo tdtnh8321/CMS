@@ -5,4 +5,5 @@ export function Get(endpoint) {
 export function Post(endpoint, data) {
     return CallApi(endpoint, 'post', data);
  }
+ 
   

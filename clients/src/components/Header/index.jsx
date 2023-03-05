@@ -1,10 +1,12 @@
 import { Menu } from "antd";
 import "./style.css";
 import logo from "../../assets/images/08_Supreme.jpg";
+import { useNavigate } from "react-router-dom";
 function Header() {
+  const naviagte = useNavigate()
   return (
     <div className="m-5 header-left">
-      <div className="LOGO my-3 flex items-center">
+      <div className="LOGO my-3 flex items-center justify-between">
         <img
           src={logo}
           alt="logo"
@@ -18,7 +20,7 @@ function Header() {
         theme="dark"
         >
         <Menu.SubMenu title={"Navigation 1"}>
-          <Menu.Item>
+          <Menu.Item onClick={()=>naviagte("/home/MenuLabel")}>
             <span> OPTION 1</span>
           </Menu.Item>
           <Menu.Item>
